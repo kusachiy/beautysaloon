@@ -24,7 +24,7 @@
                 <MenuItem Header="Exit" />
             </MenuItem>
             <MenuItem Header="Отчёты" />
-            <MenuItem Header="Сотрудники" />
+            <MenuItem Header="Сотрудники" Click="MenuItem_Click_2" />
             <MenuItem Header="Клиенты" Click="MenuItem_Click_1" />
             <MenuItem Header="Услуги" Click="MenuItem_Click" />
         </Menu>

@@ -78,5 +78,11 @@ namespace beautysaloon
             ClientPage page = new ClientPage();
             frameContent.Content = page;
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            EmployeePage page = new EmployeePage();
+            frameContent.Content = page;
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace beautysaloon.Models.RequestResponseModels
 
         public string PasswordHash => HashPassword(Password);
 
-        private static string HashPassword(string password)
+        public static string HashPassword(string password)
         {
             MD5 md5 = MD5.Create();
             byte[] inputBytes = Encoding.ASCII.GetBytes(password);

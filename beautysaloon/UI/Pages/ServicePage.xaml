@@ -18,7 +18,7 @@
         <DataGrid x:Name="servicesGrid" AutoGenerateColumns="True" IsReadOnly="True">
         </DataGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button Width="80" Content="Создать"  Margin="10,0" Click="Button_Click" />
+            <Button Width="80" Content="Создать"  Margin="10,0" Click="Button_Click" Height="40" VerticalAlignment="Top" />
             <Button Width="80" Content="Изменить" Margin="10,0" Click="Button_Click_1" />
         </StackPanel>
     </Grid>
