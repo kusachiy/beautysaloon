@@ -17,5 +17,10 @@ namespace beautysaloon
 
         public Role Role { get;set; }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
     }
 }

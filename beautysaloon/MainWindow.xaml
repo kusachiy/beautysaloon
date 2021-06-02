@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:beautysaloon"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:wnds ="clr-namespace:beautysaloon.UI"
     Title="Салон красоты"
     Width="1024"
     Height="760"
@@ -13,22 +12,27 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="25" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Записи на приём">
-                <MenuItem Header="Создать" />
-                <MenuItem Header="Посмотреть все" />
+                <MenuItem Click="MenuItem_Click_4" Header="Создать" />
+                <MenuItem Click="MenuItem_Click_3" Header="Посмотреть все" />
                 <Separator />
                 <MenuItem Header="Exit" />
             </MenuItem>
             <MenuItem Header="Отчёты" />
-            <MenuItem Header="Сотрудники" Click="MenuItem_Click_2" />
-            <MenuItem Header="Клиенты" Click="MenuItem_Click_1" />
-            <MenuItem Header="Услуги" Click="MenuItem_Click" />
+            <MenuItem Click="MenuItem_Click_2" Header="Сотрудники" />
+            <MenuItem Click="MenuItem_Click_1" Header="Клиенты" />
+            <MenuItem Click="MenuItem_Click" Header="Услуги" />
         </Menu>
         <Label Name="RightTopLabel" HorizontalAlignment="Right" />
-        <Frame Grid.Row="1" Name="frameContent" HorizontalAlignment="Left" VerticalAlignment="Top" NavigationUIVisibility="Hidden" />
+        <Frame
+            Name="frameContent"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

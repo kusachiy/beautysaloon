@@ -15,6 +15,10 @@ namespace beautysaloon.Models
         public string Phone { get; set; }
         public string Sex { get; set; }
 
+        public override string ToString()
+        {
+            return Fio;
+        }
 
     }
 }

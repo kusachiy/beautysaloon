@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.UI.Xaml.2.5.0\build\Microsoft.UI.Xaml.props" Condition="Exists('..\packages\Microsoft.UI.Xaml.2.5.0\build\Microsoft.UI.Xaml.props')" />
+  <Import Project="..\packages\Microsoft.UI.Xaml.2.4.3\build\Microsoft.UI.Xaml.props" Condition="Exists('..\packages\Microsoft.UI.Xaml.2.4.3\build\Microsoft.UI.Xaml.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -140,14 +142,20 @@
     <Compile Include="Models\RequestResponseModels\Credentalis.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\ServiceProvision.cs" />
+    <Compile Include="Models\Time.cs" />
     <Compile Include="Services\AuthorizeService.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\RoleService.cs" />
+    <Compile Include="Services\ServiceProvisionService.cs" />
     <Compile Include="Services\ServiceService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="UI\Dialogs\EditClientWindow.xaml.cs">
       <DependentUpon>EditClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\EditScheduleItemWindow.xaml.cs">
+      <DependentUpon>EditScheduleItemWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Dialogs\EditServiceWindow.xaml.cs">
       <DependentUpon>EditServiceWindow.xaml</DependentUpon>
@@ -160,6 +168,9 @@
     </Compile>
     <Compile Include="UI\Pages\EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\SchedulePage.xaml.cs">
+      <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\PasswordWindow.xaml.cs">
       <DependentUpon>PasswordWindow.xaml</DependentUpon>
@@ -184,6 +195,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Dialogs\EditScheduleItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Dialogs\EditServiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Pages\EmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\SchedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -243,5 +262,6 @@
       <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.UI.Xaml.2.5.0\build\Microsoft.UI.Xaml.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.UI.Xaml.2.5.0\build\Microsoft.UI.Xaml.props'))" />
   </Target>
 </Project>

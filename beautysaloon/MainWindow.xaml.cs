@@ -1,5 +1,6 @@
 ﻿using beautysaloon.Models.RequestResponseModels;
 using beautysaloon.Services;
+using beautysaloon.UI.Dialogs;
 using beautysaloon.UI.Pages;
 using beautysaloon.Windows;
 using System;
@@ -83,6 +84,25 @@ namespace beautysaloon
         {
             EmployeePage page = new EmployeePage();
             frameContent.Content = page;
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            SchedulePage page = new SchedulePage();
+            frameContent.Content = page;
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            EditScheduleItemWindow window = new EditScheduleItemWindow();
+            if (window.ShowDialog() == true)
+            {
+                MessageBox.Show("Сохранено");
+            }
+            else
+            {
+                MessageBox.Show("Неверные данные");
+            }
         }
     }
 }
