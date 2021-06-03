@@ -52,6 +52,8 @@ namespace beautysaloon.UI.Dialogs
                 _serviceService.Update(_service);
             else
                 _serviceService.Create(_service);
+            DialogResult = true;
+            Close();
 
         }
     }

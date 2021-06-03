@@ -42,7 +42,7 @@ namespace beautysaloon.Services
 
         internal void Update(User user)
         {
-            string sqlExpression = $"UPDATE [dbo].[Users] SET[Name] = {user.Name.WithPartipiants()} WHERE ID = {user.Id}";
+            string sqlExpression = $"UPDATE [dbo].[Users] SET[Name] = {user.Name.WithPartipiants()},[RoleID] = {user.RoleID} WHERE ID = {user.Id}";
             using (SqlConnection connection = DbConnector.GetConnection)
             {
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
@@ -53,7 +53,7 @@ namespace beautysaloon.Services
         internal void Create(User user)
         {
             string sqlExpression = $"INSERT INTO [dbo].[Users] ([Name],[Login],[HashPass],[RoleId])" +
-               $" Values ({ user.Name.WithPartipiants()},{user.Login.WithPartipiants()},{Credentalis.HashPassword("Test").WithPartipiants()},{6})";
+               $" Values ({ user.Name.WithPartipiants()},{user.Login.WithPartipiants()},{Credentalis.HashPassword("Test").WithPartipiants()},{user.RoleID})";
             using (SqlConnection connection = DbConnector.GetConnection)
             {
                 SqlCommand command = new SqlCommand(sqlExpression, connection);

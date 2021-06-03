@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using beautysaloon.Services;
+using beautysaloon.Models;
 
 namespace beautysaloon.UI.Dialogs
 {
@@ -45,12 +46,23 @@ namespace beautysaloon.UI.Dialogs
         {
             _user.Name = TbxName.Text;
             _user.Login = TbxLogin.Text;
-
+            _user.Role = (Role)comboBox.SelectedItem;
+            _user.RoleID = ((Role)comboBox.SelectedItem).Id;
             if (_isUpdateMode)
                 _userService.Update(_user);
             else
                 _userService.Create(_user);
+            DialogResult = true;
+            Close();
 
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var roles = (new RoleService()).GetAll();
+            comboBox.ItemsSource = roles;
+            if (_user?.RoleID != null)
+                comboBox.SelectedItem = roles.FirstOrDefault(r=>r.Id==_user.RoleID);
         }
     }
 }

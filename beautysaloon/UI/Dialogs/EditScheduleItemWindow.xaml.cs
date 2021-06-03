@@ -21,10 +21,16 @@ namespace beautysaloon.UI.Dialogs
     /// Логика взаимодействия для EditScheduleItemWindow.xaml
     /// </summary>
     public partial class EditScheduleItemWindow : Window
-    {   
+    {
+        ServiceProvision _serviceProvision;
         public EditScheduleItemWindow()
         {
             InitializeComponent();
+        }
+        public EditScheduleItemWindow(ServiceProvision s)
+        {
+            InitializeComponent();
+            _serviceProvision = s;
         }
 
         private void Accept_Click(object sender, RoutedEventArgs e)
@@ -57,6 +63,13 @@ namespace beautysaloon.UI.Dialogs
                 times.Add(new UserTime(i,true));
             }
             comboBoxTimes.ItemsSource = times;
+
+            if (_serviceProvision != null)
+            {
+                comboBox1.SelectedItem = clients.FirstOrDefault(c => c.Id == _serviceProvision.ClientId);
+                comboBox2.SelectedItem = services.FirstOrDefault(c => c.Id == _serviceProvision.ServiceId);
+                comboBox3.SelectedItem = users.FirstOrDefault(c => c.Id == _serviceProvision.MasterId);                
+            }
         }
     }
 }

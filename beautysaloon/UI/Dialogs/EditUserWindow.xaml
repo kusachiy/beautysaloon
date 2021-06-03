@@ -1,23 +1,52 @@
-﻿<Window x:Class="beautysaloon.UI.Dialogs.EditUserWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:beautysaloon.UI.Dialogs"
-        mc:Ignorable="d"
-        Title="EditUserWindow" Height="288" Width="359">
-    <Grid >
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="147,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" x:Name="TbxName"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="148,63,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" x:Name="TbxLogin"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="147,101,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" x:Name="TbxRole"/>
-        
-        <Label Content="ФИО" HorizontalAlignment="Left" Margin="105,26,0,0" VerticalAlignment="Top"/>
-        <Label Content="Логин" HorizontalAlignment="Left" Margin="99,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.046,0.5"/>
-        <Label Content="Роль" HorizontalAlignment="Left" Margin="105,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.611,0.424"/>
-     
-        <WrapPanel            
-            Margin="0,193,24,27"
-            HorizontalAlignment="Right">
+﻿<Window
+    x:Class="beautysaloon.UI.Dialogs.EditUserWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:beautysaloon.UI.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="EditUserWindow"
+    Width="359"
+    Height="288"
+    Loaded="Window_Loaded"
+    mc:Ignorable="d">
+    <Grid>
+        <TextBox
+            x:Name="TbxName"
+            Width="150"
+            Height="23"
+            Margin="147,26,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="TbxLogin"
+            Width="150"
+            Height="23"
+            Margin="148,63,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+
+        <Label
+            Margin="105,26,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="ФИО" />
+        <Label
+            Margin="99,60,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Логин"
+            RenderTransformOrigin="0.046,0.5" />
+        <Label
+            Margin="105,98,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Роль"
+            RenderTransformOrigin="0.611,0.424" />
+
+        <WrapPanel Margin="0,193,24,27" HorizontalAlignment="Right">
             <Button
                 MinWidth="60"
                 Margin="0,0,10,0"
@@ -27,5 +56,11 @@
             </Button>
             <Button MinWidth="60" IsCancel="True">Отмена</Button>
         </WrapPanel>
+        <ComboBox
+            x:Name="comboBox"
+            Width="150"
+            Margin="147,102,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
     </Grid>
 </Window>

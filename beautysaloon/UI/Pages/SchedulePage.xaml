@@ -21,17 +21,5 @@
             x:Name="servicesGrid"
             AutoGenerateColumns="True"
             IsReadOnly="True" />
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button
-                Width="80"
-                Margin="10,0"
-                Click="Button_Click"
-                Content="Создать" />
-            <Button
-                Width="80"
-                Margin="10,0"
-                Click="Button_Click_1"
-                Content="Изменить" />
-        </StackPanel>
     </Grid>
 </Page>

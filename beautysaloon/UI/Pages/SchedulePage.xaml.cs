@@ -1,5 +1,6 @@
 ﻿using beautysaloon.Models;
 using beautysaloon.Services;
+using beautysaloon.UI.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,37 +48,6 @@ namespace beautysaloon.UI.Pages
 
 
             servicesGrid.ItemsSource = ServiceProvisions;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            /*
-            EditServiceWindow window = new EditServiceWindow();
-            if (window.ShowDialog() == true)
-            {
-                MessageBox.Show("Сохранено");
-            }
-            else
-            {
-                MessageBox.Show("Неверные данные");
-            }*/
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            /*
-            var s = servicesGrid.SelectedItem as Service;
-
-            EditServiceWindow window = new EditServiceWindow(s);
-            if (window.ShowDialog() == true)
-            {
-                MessageBox.Show("Сохранено");
-            }
-            else
-            {
-                MessageBox.Show("Неверные данные");
-            }*/
-        }
+        }      
     }
 }

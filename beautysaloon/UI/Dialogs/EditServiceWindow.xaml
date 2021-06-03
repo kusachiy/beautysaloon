@@ -1,23 +1,69 @@
-﻿<Window x:Class="beautysaloon.UI.Dialogs.EditServiceWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:beautysaloon.UI.Dialogs"
-        mc:Ignorable="d"
-        Title="EditServiceWindow" Height="282" Width="359">
+﻿<Window
+    x:Class="beautysaloon.UI.Dialogs.EditServiceWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:beautysaloon.UI.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="EditServiceWindow"
+    Width="359"
+    Height="282"
+    mc:Ignorable="d">
     <Grid Margin="0,0,2,-1">
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Name="TbxName"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="176,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Name="TbxDesc"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Name="TbxDuration"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,149,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Name="TbxPrice"/>
-        <Label Content="Наименование" HorizontalAlignment="Left" Margin="77,37,0,0" VerticalAlignment="Top"/>
-        <Label Content="Описание" HorizontalAlignment="Left" Margin="105,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.046,0.5"/>
-        <Label Content="Продолжительность (мин.)" HorizontalAlignment="Left" Margin="12,108,0,0" VerticalAlignment="Top"/>
-        <Label Content="Стоимость (руб.)" HorizontalAlignment="Left" Margin="69,146,0,0" VerticalAlignment="Top"/>
-        <WrapPanel            
-            Margin="0,193,24,27"
-            HorizontalAlignment="Right">
+        <TextBox
+            Name="TbxName"
+            Width="150"
+            Height="23"
+            Margin="175,37,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <TextBox
+            Name="TbxDesc"
+            Width="150"
+            Height="23"
+            Margin="176,74,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <TextBox
+            Name="TbxDuration"
+            Width="150"
+            Height="23"
+            Margin="175,112,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <TextBox
+            Name="TbxPrice"
+            Width="150"
+            Height="23"
+            Margin="175,149,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <Label
+            Margin="77,37,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Наименование" />
+        <Label
+            Margin="105,71,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Описание"
+            RenderTransformOrigin="0.046,0.5" />
+        <Label
+            Margin="12,108,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Продолжительность (мин.)" />
+        <Label
+            Margin="69,146,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Стоимость (руб.)" />
+        <WrapPanel Margin="0,193,24,27" HorizontalAlignment="Right">
             <Button
                 MinWidth="60"
                 Margin="0,0,10,0"

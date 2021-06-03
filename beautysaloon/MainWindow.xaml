@@ -16,16 +16,28 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem
+                Name="userMenu"
+                Click="MenuItem_Click_2"
+                Header="Сотрудники" />
             <MenuItem Header="Записи на приём">
-                <MenuItem Click="MenuItem_Click_4" Header="Создать" />
+                <MenuItem
+                    Name="scheduleMenu"
+                    Click="MenuItem_Click_4"
+                    Header="Создать" />
                 <MenuItem Click="MenuItem_Click_3" Header="Посмотреть все" />
                 <Separator />
                 <MenuItem Header="Exit" />
             </MenuItem>
-            <MenuItem Header="Отчёты" />
-            <MenuItem Click="MenuItem_Click_2" Header="Сотрудники" />
-            <MenuItem Click="MenuItem_Click_1" Header="Клиенты" />
-            <MenuItem Click="MenuItem_Click" Header="Услуги" />
+            <MenuItem Name="reportMenu" Header="Отчёты" />
+            <MenuItem
+                Name="clientMenu"
+                Click="MenuItem_Click_1"
+                Header="Клиенты" />
+            <MenuItem
+                Name="servicesMenu"
+                Click="MenuItem_Click"
+                Header="Услуги" />
         </Menu>
         <Label Name="RightTopLabel" HorizontalAlignment="Right" />
         <Frame
