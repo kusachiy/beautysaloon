@@ -29,7 +29,9 @@
                 <Separator />
                 <MenuItem Header="Exit" />
             </MenuItem>
-            <MenuItem Name="reportMenu" Header="Отчёты" />
+            <MenuItem Name="reportMenu" Header="Отчёты">
+                <MenuItem Click="MenuItem_Click_5" Header="Загрузка мастеров" />
+            </MenuItem>
             <MenuItem
                 Name="clientMenu"
                 Click="MenuItem_Click_1"

@@ -141,6 +141,7 @@
     <Compile Include="Models\RequestResponseModels\AuthorizeResponse.cs" />
     <Compile Include="Models\RequestResponseModels\Credentalis.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\SaleModel.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceProvision.cs" />
     <Compile Include="Models\Time.cs" />
@@ -168,6 +169,9 @@
     </Compile>
     <Compile Include="UI\Pages\EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\MostWantedMastersReport.xaml.cs">
+      <DependentUpon>MostWantedMastersReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
@@ -215,6 +219,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Pages\MostWantedMastersReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Pages\SchedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,6 +255,44 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\App.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.DataSet1TableAdapters.ServiceProvisionsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.DataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.DataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.Client.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.RequestResponseModels.AuthorizeResponse.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.RequestResponseModels.Credentalis.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.Role.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.SaleModel.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.Service.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.ServiceProvision.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Models.UserTime.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Services.AuthorizeService.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Services.ClientService.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Services.RoleService.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Services.ServiceProvisionService.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Services.ServiceService.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Services.UserService.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Dialogs.EditClientWindow.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Dialogs.EditScheduleItemWindow.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Dialogs.EditServiceWindow.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Dialogs.EditUserWindow.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Pages.ClientPage.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Pages.EmployeePage.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.UI.Pages.SchedulePage.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Windows.PasswordWindow.datasource" />
+    <None Include="Properties\DataSources\beautysaloon.Windows.ServicePage.datasource" />
+    <None Include="Properties\DataSources\DataSet1.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ServiceProvisionsDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ServiceProvisionsRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ServiceProvisionsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ServiceProvisionsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DbConnector.datasource" />
+    <None Include="Properties\DataSources\Extensions.datasource" />
+    <None Include="Properties\DataSources\MainWindow.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

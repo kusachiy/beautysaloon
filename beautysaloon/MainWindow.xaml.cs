@@ -117,5 +117,11 @@ namespace beautysaloon
                 MessageBox.Show("Неверные данные");
             }
         }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            MostWantedMastersReport page = new MostWantedMastersReport();
+            frameContent.Content = page;
+        }
     }
 }

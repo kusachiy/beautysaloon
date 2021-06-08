@@ -40,9 +40,10 @@ namespace beautysaloon.UI.Dialogs
             var master = (User)comboBox3.SelectedItem;
             var dt = (DateTime)dtpicker.SelectedDate;
             var time = (UserTime)comboBoxTimes.SelectedItem;
+            var sale = (SaleModel)comboBoxSales.SelectedItem;
             if (time != null)
                 dt = dt.Add(time.Value);
-            (new ServiceProvisionService()).Create(new Models.ServiceProvision() { ClientId = clinet.Id,MasterId = master.Id, ServiceId= service.Id, Dt = dt});
+            (new ServiceProvisionService()).Create(new Models.ServiceProvision() { ClientId = clinet.Id,MasterId = master.Id, ServiceId= service.Id, Dt = dt, Sale = sale.Value});
             this.DialogResult = true;
             this.Close();
         }
@@ -63,6 +64,13 @@ namespace beautysaloon.UI.Dialogs
                 times.Add(new UserTime(i,true));
             }
             comboBoxTimes.ItemsSource = times;
+
+            var sales = new List<SaleModel>();
+            for (int i = 5; i < 25; i+=5)
+            {
+                sales.Add(new SaleModel() {Value = i });               
+            }
+            comboBoxSales.ItemsSource = sales;
 
             if (_serviceProvision != null)
             {

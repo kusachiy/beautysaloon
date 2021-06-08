@@ -19,5 +19,7 @@ namespace beautysaloon.Models
         public User Master { get; set; }
         public DateTime Dt { get; set; }
 
+        public int? Sale { get; set; }
+
     }
 }

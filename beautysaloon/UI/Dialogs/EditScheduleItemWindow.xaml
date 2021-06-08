@@ -35,7 +35,7 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Content="Дата записи" />
-        <WrapPanel Margin="0,185,126,35" HorizontalAlignment="Right">
+        <WrapPanel Margin="0,215,122,5" HorizontalAlignment="Right">
             <Button
                 MinWidth="60"
                 Margin="0,0,10,0"
@@ -73,6 +73,18 @@
             x:Name="comboBoxTimes"
             Width="90"
             Margin="262,139,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <Label
+            Margin="0,169,251,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Content="Применить скидку"
+            RenderTransformOrigin="-4.232,0.684" />
+        <ComboBox
+            x:Name="comboBoxSales"
+            Width="120"
+            Margin="146,173,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" />
 

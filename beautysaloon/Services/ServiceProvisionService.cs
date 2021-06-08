@@ -34,8 +34,9 @@ namespace beautysaloon.Services
                             int masterId = reader.GetInt32(2);
                             int serviceID = reader.GetInt32(3);
                             DateTime dt = reader.GetDateTime(4);
+                            int? sale = reader.GetValue(5) as int?;
 
-                            result.Add(new ServiceProvision { Id = id, ServiceId = serviceID, ClientId = clientId, MasterId = masterId, Dt = dt });
+                            result.Add(new ServiceProvision { Id = id, ServiceId = serviceID, ClientId = clientId, MasterId = masterId, Dt = dt, Sale = sale });
                         }
                     }
                 }
@@ -50,8 +51,8 @@ namespace beautysaloon.Services
 
         internal void Create(ServiceProvision serviceProvision)
         {
-            string sqlExpression = $"INSERT INTO [ServiceProvisions]([ClientId],[MasterId],[ServiceId],[DT])" +
-               $" Values ({ serviceProvision.ClientId},{serviceProvision.MasterId},{serviceProvision.ServiceId},'{serviceProvision.Dt.ToString("yyyy-MM-dd HH:mm:ss")}')";
+            string sqlExpression = $"INSERT INTO [ServiceProvisions]([ClientId],[MasterId],[ServiceId],[DT],[Sale])" +
+               $" Values ({ serviceProvision.ClientId},{serviceProvision.MasterId},{serviceProvision.ServiceId},'{serviceProvision.Dt.ToString("yyyy-MM-dd HH:mm:ss")}',{serviceProvision.Sale})";
             using (SqlConnection connection = DbConnector.GetConnection)
             {
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
