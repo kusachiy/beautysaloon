@@ -173,6 +173,9 @@
     <Compile Include="UI\Pages\MostWantedMastersReport.xaml.cs">
       <DependentUpon>MostWantedMastersReport.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pages\MostWantedServicesReport.xaml.cs">
+      <DependentUpon>MostWantedServicesReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
@@ -182,6 +185,7 @@
     <Compile Include="UI\Pages\ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserContext.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -220,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Pages\MostWantedMastersReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\MostWantedServicesReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -66,17 +66,27 @@ namespace beautysaloon.UI.Dialogs
             comboBoxTimes.ItemsSource = times;
 
             var sales = new List<SaleModel>();
-            for (int i = 5; i < 25; i+=5)
+            for (int i = 0; i <= 25; i+=5)
             {
                 sales.Add(new SaleModel() {Value = i });               
             }
             comboBoxSales.ItemsSource = sales;
-
+            comboBoxSales.SelectedIndex = 0;
             if (_serviceProvision != null)
             {
                 comboBox1.SelectedItem = clients.FirstOrDefault(c => c.Id == _serviceProvision.ClientId);
                 comboBox2.SelectedItem = services.FirstOrDefault(c => c.Id == _serviceProvision.ServiceId);
                 comboBox3.SelectedItem = users.FirstOrDefault(c => c.Id == _serviceProvision.MasterId);                
+            }
+        }
+
+        private void comboBoxSales_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var service = comboBox2.SelectedItem as Service;
+            var sale = comboBoxSales.SelectedItem as SaleModel;
+            if (service != null && sale != null)
+            {
+                PriceLabel.Content = $"Итоговая стоимость: {service.Price * (100 - sale.Value) / 100.0 }";
             }
         }
     }

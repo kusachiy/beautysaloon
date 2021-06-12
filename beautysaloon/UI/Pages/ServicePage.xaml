@@ -21,7 +21,10 @@
             x:Name="servicesGrid"
             AutoGenerateColumns="True"
             IsReadOnly="True" />
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <StackPanel
+            Name="ButtonPanel"
+            Grid.Row="1"
+            Orientation="Horizontal">
             <Button
                 Width="80"
                 Height="40"

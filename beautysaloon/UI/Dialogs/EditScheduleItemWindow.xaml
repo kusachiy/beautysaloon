@@ -35,16 +35,7 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Content="Дата записи" />
-        <WrapPanel Margin="0,215,122,5" HorizontalAlignment="Right">
-            <Button
-                MinWidth="60"
-                Margin="0,0,10,0"
-                Click="Accept_Click"
-                IsDefault="True">
-                OK
-            </Button>
-            <Button MinWidth="60" IsCancel="True">Отмена</Button>
-        </WrapPanel>
+
         <ComboBox
             x:Name="comboBox1"
             Width="120"
@@ -56,7 +47,8 @@
             Width="120"
             Margin="146,67,0,0"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" />
+            VerticalAlignment="Top"
+            SelectionChanged="comboBoxSales_SelectionChanged" />
         <ComboBox
             x:Name="comboBox3"
             Width="120"
@@ -86,9 +78,23 @@
             Width="120"
             Margin="146,173,0,0"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" />
+            VerticalAlignment="Top"
+            SelectionChanged="comboBoxSales_SelectionChanged" />
+        <Label
+            Name="PriceLabel"
+            Margin="96,200,40,67"
+            Content="Стоимость услуги: " />
 
-
+        <WrapPanel Margin="0,249,124,-29" HorizontalAlignment="Right">
+            <Button
+                MinWidth="60"
+                Margin="0,0,10,0"
+                Click="Accept_Click"
+                IsDefault="True">
+                OK
+            </Button>
+            <Button MinWidth="60" IsCancel="True">Отмена</Button>
+        </WrapPanel>
 
     </Grid>
 

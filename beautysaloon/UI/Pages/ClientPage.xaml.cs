@@ -29,6 +29,7 @@ namespace beautysaloon.UI.Pages
         {
             InitializeComponent();
             _clientService = new ClientService();
+            ButtonPanel.Visibility = UserContext.CurrentUser.RoleID == 6 ? Visibility.Collapsed : Visibility.Visible;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

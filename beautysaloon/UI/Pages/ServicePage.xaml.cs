@@ -34,6 +34,7 @@ namespace beautysaloon.Windows
         {
             this.Services = _serviceService.GetAll();
             servicesGrid.ItemsSource = Services;
+            ButtonPanel.Visibility = UserContext.CurrentUser.RoleID == 6 ? Visibility.Collapsed : Visibility.Visible;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

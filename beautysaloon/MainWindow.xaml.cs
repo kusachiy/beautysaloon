@@ -43,15 +43,18 @@ namespace beautysaloon
         {
             var result = _authorizeService.Authorize(credentalis);
             if (result.Found)
+            {
                 _currentUser = result.CurrentUser;
+                UserContext.CurrentUser = result.CurrentUser;
+            }
             if (_currentUser != null)
             {
                 HasAdminAccess = _currentUser.RoleID == 4;
                 HasModerAccess = _currentUser.RoleID == 4 || _currentUser.RoleID == 5;
                 scheduleMenu.Visibility = HasModerAccess ? Visibility.Visible : Visibility.Collapsed;
-                userMenu.Visibility = HasAdminAccess ? Visibility.Visible : Visibility.Collapsed;
-                servicesMenu.Visibility = HasModerAccess ? Visibility.Visible : Visibility.Collapsed;
-                clientMenu.Visibility = HasModerAccess ? Visibility.Visible : Visibility.Collapsed;
+                userMenu.Visibility = HasModerAccess ? Visibility.Visible : Visibility.Collapsed;
+                //servicesMenu.Visibility = HasModerAccess ? Visibility.Visible : Visibility.Collapsed;
+                //clientMenu.Visibility = HasModerAccess ? Visibility.Visible : Visibility.Collapsed;
                 reportMenu.Visibility = HasAdminAccess ? Visibility.Visible : Visibility.Collapsed;
             }
         }
@@ -121,6 +124,12 @@ namespace beautysaloon
         private void MenuItem_Click_5(object sender, RoutedEventArgs e)
         {
             MostWantedMastersReport page = new MostWantedMastersReport();
+            frameContent.Content = page;
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            MostWantedServicesReport page = new MostWantedServicesReport();
             frameContent.Content = page;
         }
     }
