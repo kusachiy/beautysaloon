@@ -48,6 +48,7 @@ namespace beautysaloon.UI.Pages
 
 
             servicesGrid.ItemsSource = ServiceProvisions;
+            servicesGrid.SelectedIndex = 0;
         }      
     }
 }

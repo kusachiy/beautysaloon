@@ -36,6 +36,7 @@ namespace beautysaloon.UI.Pages
         {
             this.Clients = _clientService.GetAll();
             servicesGrid.ItemsSource = Clients;
+            servicesGrid.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
